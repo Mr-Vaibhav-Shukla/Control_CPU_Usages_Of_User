@@ -8,8 +8,8 @@ will may consume 100% CPU of our system. So to avoid this we will have to apply 
 ```
 sudo systemctl set-property user-1000.slice CPUQuota=50%
 ```
-Here in the above command replace **1000** with **the user id of the user** on which you want to apply restrictions.
-In the above command we are restricting the user of user id **1000** not to use CPU over 50 percent
+Here in the above command replace **1000** with **the user id of the user** on which you want to apply restrictions.(Get id by typing *id* in the terminal).
+In the above command we are restricting the user of user id **1000** not to use CPU over 50 percent.
 
 
 
