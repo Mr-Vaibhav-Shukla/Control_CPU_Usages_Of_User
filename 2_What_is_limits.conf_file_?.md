@@ -60,4 +60,3 @@ Inside the limit.conf file each line describe a limit for a user
 ```
     man limits.conf
 ```
-
