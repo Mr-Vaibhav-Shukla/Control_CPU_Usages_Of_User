@@ -3,7 +3,7 @@
 
 ### SYNOPSIS
 ```
-cputool [--cpu-limit PCNT]  [--load-limit LOAD]  [ [--pid PID  | --pid-pgrp PID ]  |  [--]  COMMAND ...  ]
+cputool [--cpu-limit PCNT]  [--load-limit LOAD]  [ [--pid PID  | --pid-pgrp PID ]  | [--]  COMMAND ... ]
 ```
 
 ### DESCRIPTION
