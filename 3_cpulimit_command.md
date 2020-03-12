@@ -66,33 +66,50 @@ display this help and exit
 Assuming you have started `foo --bar` and you find out with top(1) or ps(1) that this process uses all your CPU time you can
 either
 ```
-> cpulimit -e foo -l 50
+cpulimit -e foo -l 50
+```
 limits the CPU usage of the process by acting on the executable program file (note: the argument "--bar" is omitted)
 
-> cpulimit -p 1234 -l 50
+```
+cpulimit -p 1234 -l 50
+```
 limits the CPU usage of the process by acting on its PID, as shown by ps(1)
 
-> cpulimit -P /usr/bin/foo -l 50
+
+``` 
+cpulimit -P /usr/bin/foo -l 50
+```
 same as -e but uses the absolute path name
 
-> /usr/bin/someapp
-
-> cpulimit -p $! -l 25 -b
+**/usr/bin/someapp**
+```
+cpulimit -p $! -l 25 -b
+```
 Useful for scripts where you want to throttle the last command run.
 
-> cpulimit -l 20 firefox
+```
+cpulimit -l 20 firefox
+```
 Launch Firefox web browser and limit its CPU usage to 20%
 
-> cpulimit -l 25 -- firefox -private
+```
+cpulimit -l 25 -- firefox -private
+```
 Launch Firefox web browser in private mode and limit its CPU usage to 25%
 
-> cpulimit -c 2 -p 12345 -l 25
+```
+cpulimit -c 2 -p 12345 -l 25
+```
 The -c flag sets the number of CPU cores the program thinks are available. Usually this is detected for us, but can be 
 overridden.
 
-> cpulimit -l 20 -k firefox
+```
+cpulimit -l 20 -k firefox
+```
 Launch the Firefox program and kill it if the process goes over 20% CPU usage.
 
-> cpulimit -l 20 -p 1234 -s SIGTERM
-Throttle process 1234 at 20% CPU usage. If cpulimit is forced to exit, it sends the watched process the SIGTERM signal.
 ```
+cpulimit -l 20 -p 1234 -s SIGTERM
+```
+Throttle process 1234 at 20% CPU usage. If cpulimit is forced to exit, it sends the watched process the SIGTERM signal.
+
