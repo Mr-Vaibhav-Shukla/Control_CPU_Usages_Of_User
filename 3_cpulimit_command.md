@@ -1,7 +1,6 @@
 # cpulimit
 ## cpulimit - limits the CPU usage of a process
 ### SYNOPSIS
-
 ```
 cpulimit [TARGET] [OPTIONS...] [ -- PROGRAM]
 ```
