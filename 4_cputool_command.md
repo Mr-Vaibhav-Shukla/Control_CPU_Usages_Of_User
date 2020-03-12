@@ -5,7 +5,6 @@
 ```
 cputool [--cpu-limit PCNT]  [--load-limit LOAD]  [ [--pid PID  | --pid-pgrp PID ]  | [--]  COMMAND ... ]
 ```
-
 ### DESCRIPTION
 Limit  the  CPU usage of a process or a process group to a given limit and/or suspend processes if the system load exceeds a
 threshold. CPUTool works by sending SIGSTOP and SIGCONT signals to processes depending on the system load.
